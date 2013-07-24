@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Mapple/Mapple.iml" filepath="$PROJECT_DIR$/Mapple/Mapple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mapple/Mapple-Mapple.iml" filepath="$PROJECT_DIR$/Mapple/Mapple-Mapple.iml" />
       <module fileurl="file://$PROJECT_DIR$/MappleProject.iml" filepath="$PROJECT_DIR$/MappleProject.iml" />
     </modules>
   </component>

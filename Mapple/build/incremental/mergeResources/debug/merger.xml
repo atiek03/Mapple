@@ -2,59 +2,59 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res" >
+        <source path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res" >
             <file
                 name="ic_launcher"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/drawable-hdpi/ic_launcher.png"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="login"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/drawable-hdpi/login.png"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/drawable-hdpi/login.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="meshi"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/drawable-hdpi/meshi.png"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/drawable-hdpi/meshi.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="signup"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/drawable-hdpi/signup.png"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/drawable-hdpi/signup.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="sora"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/drawable-hdpi/sora.png"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/drawable-hdpi/sora.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="activity_login"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/layout/activity_login.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/layout/activity_login.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_main"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/layout/activity_main.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/layout/activity_main.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_save"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/layout/activity_save.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/layout/activity_save.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_signup"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/layout/activity_signup.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/layout/activity_signup.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="main"
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/menu/main.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/menu/main.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values/dimens.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -62,7 +62,7 @@
                 </dimen>
             </file>
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values/strings.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values/strings.xml"
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
@@ -72,7 +72,7 @@
                 </string>
             </file>
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values/styles.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values/styles.xml"
                 qualifiers="" >
 
                 <style
@@ -94,16 +94,16 @@
                 </style>
             </file>
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values-sw600dp/dimens.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values-sw600dp/dimens.xml"
                 qualifiers="sw600dp" />
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values-sw720dp-land/dimens.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values-sw720dp-land/dimens.xml"
                 qualifiers="sw720dp-land" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values-v11/styles.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values-v11/styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -114,7 +114,7 @@
                 </style>
             </file>
             <file
-                path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/res/values-v14/styles.xml"
+                path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/res/values-v14/styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -125,10 +125,10 @@
                 </style>
             </file>
         </source>
-        <source path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/build/res/rs/debug" />
+        <source path="/Users/daniel/Documents/projects/Mapple/Mapple/build/res/rs/debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/debug/res" />
+        <source path="/Users/daniel/Documents/projects/Mapple/Mapple/src/debug/res" />
     </dataSet>
 
 </merger>

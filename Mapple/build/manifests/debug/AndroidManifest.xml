@@ -10,6 +10,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.allen.mapple.SignupActivity">
+        </activity>
+        <activity android:name="com.allen.mapple.LoginActivity">
+        </activity>
+        <activity android:name="com.allen.mapple.RegistrationActivity">
+        </activity>
     </application>
 
 </manifest>

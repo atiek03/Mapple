@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/main/assets" />
+        <source path="/Users/daniel/Documents/projects/Mapple/Mapple/src/main/assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/atiek/AndroidStudioProjects/MappleProject/Mapple/src/debug/assets" />
+        <source path="/Users/daniel/Documents/projects/Mapple/Mapple/src/debug/assets" />
     </dataSet>
 
 </merger>

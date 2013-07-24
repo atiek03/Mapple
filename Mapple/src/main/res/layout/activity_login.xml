@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="email address"
             android:id="@+id/textView3"
-            android:layout_alignBottom="@+id/editText"
+            android:layout_alignBottom="@+id/email_register_edit"
             android:layout_alignParentLeft="true"/>
 
     <TextView
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="password"
             android:id="@+id/textView4"
-            android:layout_alignBottom="@+id/editText2"
+            android:layout_alignBottom="@+id/password_register_edit"
             android:layout_alignParentLeft="true"/>
 
     <EditText
@@ -36,16 +36,16 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/email_register_edit"
             android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/editText2"/>
+            android:layout_alignLeft="@+id/password_register_edit"/>
 
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/password_register_edit"
             android:layout_below="@+id/textView3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp"/>

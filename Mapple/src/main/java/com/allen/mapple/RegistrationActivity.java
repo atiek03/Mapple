@@ -1,6 +1,8 @@
 package com.allen.mapple;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,10 +32,14 @@ public class RegistrationActivity extends Activity {
     private EditText passwordText;
     private Button loginButton;
 
+    private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newlogin);
+
+        context = this;
 
         emailText = (EditText) findViewById(R.id.email_register_edit);
         passwordText = (EditText) findViewById(R.id.password_register_edit);
@@ -81,6 +87,12 @@ public class RegistrationActivity extends Activity {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            Intent intent = new Intent(context, MapActivity.class);
+            startActivity(intent);
         }
     }
 }

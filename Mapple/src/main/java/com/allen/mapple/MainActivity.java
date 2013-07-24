@@ -17,8 +17,10 @@ public class MainActivity extends Activity {
         if(token == null) {
             Intent intent = new Intent(this, SignupActivity.class);
             startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, MapActivity.class);
+            startActivity(intent);
         }
-        setContentView(R.layout.activity_main);
     }
 
 

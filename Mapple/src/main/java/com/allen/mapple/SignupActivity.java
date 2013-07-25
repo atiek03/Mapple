@@ -27,14 +27,14 @@ public class SignupActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, RegistrationActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 0);
             }
         });
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, LoginActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 0);
             }
         });
     }
@@ -42,7 +42,9 @@ public class SignupActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        setResult(resultCode, data);
-        finish();
+        if(resultCode == RESULT_OK) {
+            setResult(resultCode, data);
+            finish();
+        }
     }
 }

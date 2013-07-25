@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
     }
 
     protected void setupActivity() {
-        Log.d(TAG, "settings up map");
+        Log.d(TAG, "setting up map");
     }
 
     @Override

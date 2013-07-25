@@ -20,6 +20,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -55,28 +56,27 @@ public class RegistrationActivity extends Activity {
         });
     }
 
-    class RegisterTask extends AsyncTask<Void, Void, Void> {
+    class RegisterTask extends AsyncTask<Void, Void, User> {
 
-        protected Void doInBackground(Void... params) {
+        protected User doInBackground(Void... params) {
             int TIMEOUT_MILLISEC = 10000;  // = 10 seconds
             HttpParams httpParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpParams, TIMEOUT_MILLISEC);
             HttpConnectionParams.setSoTimeout(httpParams, TIMEOUT_MILLISEC);
             HttpClient client = new DefaultHttpClient(httpParams);
-            URI uri = URI.create("http://192.168.100.103:3000/api/users");
+            URI uri = URI.create("http://10.0.2.2:3000/api/users");
             HttpPost request = new HttpPost(uri);
             request.setHeader("Content-Type", "application/json");
             request.setHeader("Accept", "application/json");
+            User user = new User(emailText.getText().toString(), passwordText.getText().toString());
 
             JSONObject json = new JSONObject();
             try {
-                JSONObject user = new JSONObject();
-                user.put("email", emailText.getText().toString());
-                user.put("password", passwordText.getText().toString());
-                json.put("user", user);
+                json.put("user", user.toJson());
                 request.setEntity(new StringEntity(json.toString()));
                 HttpResponse response = client.execute(request);
-                Log.d("FOOBAR", response.toString());
+                JSONObject responseObject = new JSONObject(EntityUtils.toString(response.getEntity()));
+                return User.fromJson(responseObject.getJSONObject("user"));
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (UnsupportedEncodingException e) {
@@ -91,7 +91,7 @@ public class RegistrationActivity extends Activity {
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
+        protected void onPostExecute(User aVoid) {
             Intent intent = new Intent(context, MapActivity.class);
             startActivity(intent);
         }

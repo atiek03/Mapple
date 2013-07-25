@@ -3,6 +3,7 @@ package com.allen.mapple;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
@@ -16,13 +17,25 @@ public class MainActivity extends Activity {
         }
         if(token == null) {
             Intent intent = new Intent(this, SignupActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, 0);
         } else {
-            Intent intent = new Intent(this, MapActivity.class);
-            startActivity(intent);
+            setupActivity();
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_CANCELED) {
+            finish();
+        } else {
+            setupActivity();
+        }
+    }
+
+    protected void setupActivity() {
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

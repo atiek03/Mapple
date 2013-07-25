@@ -11,9 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
@@ -61,31 +63,30 @@ public class RegistrationActivity extends Activity {
             HttpConnectionParams.setConnectionTimeout(httpParams, TIMEOUT_MILLISEC);
             HttpConnectionParams.setSoTimeout(httpParams, TIMEOUT_MILLISEC);
             HttpClient client = new DefaultHttpClient(httpParams);
-            URI uri = URI.create("http://tuvistavie.com:3000/api/users");
+            URI uri = URI.create("http://192.168.100.103:3000/api/users");
             HttpPost request = new HttpPost(uri);
             request.setHeader("Content-Type", "application/json");
             request.setHeader("Accept", "application/json");
 
             JSONObject json = new JSONObject();
-            byte[] message = new byte[1];
             try {
                 JSONObject user = new JSONObject();
                 user.put("email", emailText.getText().toString());
                 user.put("password", passwordText.getText().toString());
                 json.put("user", user);
-                message = json.toString().getBytes("UTF8");
+                request.setEntity(new StringEntity(json.toString()));
+                HttpResponse response = client.execute(request);
+                Log.d("FOOBAR", response.toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
-            }
-            request.setEntity(new ByteArrayEntity(message));
-            try {
-                HttpResponse response = client.execute(request);
-                Log.d("FOOBARFOO", response.toString());
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
             return null;
         }
 

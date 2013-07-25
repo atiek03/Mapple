@@ -9,7 +9,7 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 
-    public final static String BASE_URL = "http://192.168.100.103:3000";
+    public final static String BASE_URL = "http://mapple-backend.herokuapp.com";
 
     private final static int SIGNUP_CODE = 0;
     private final static int MAP_CODE = 1;

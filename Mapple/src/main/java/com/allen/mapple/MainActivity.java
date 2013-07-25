@@ -8,6 +8,8 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG = "com.allen.mapple.MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class MainActivity extends Activity {
     }
 
     protected void setupActivity() {
-
+        Log.d(TAG, "settings up map");
     }
 
     @Override

@@ -56,7 +56,8 @@ public class User implements Parcelable {
 
     public static User fromJson(JSONObject object) {
         try {
-            User user = new User(object.getString("emai"), object.getString("authentication_token"));
+            User user = new User(object.getString("email"),
+                    object.getString("authentication_token"));
             return user;
         } catch (JSONException e) {
             return null;

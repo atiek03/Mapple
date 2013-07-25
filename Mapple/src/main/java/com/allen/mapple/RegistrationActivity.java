@@ -31,6 +31,8 @@ import java.net.URI;
 
 public class RegistrationActivity extends Activity {
 
+    private final static String TAG = "com.allen.mapple.RegistrationActivity";
+
     private EditText emailText;
     private EditText passwordText;
     private Button loginButton;
@@ -68,15 +70,16 @@ public class RegistrationActivity extends Activity {
             HttpPost request = new HttpPost(uri);
             request.setHeader("Content-Type", "application/json");
             request.setHeader("Accept", "application/json");
-            User user = new User(emailText.getText().toString(), passwordText.getText().toString());
 
             JSONObject json = new JSONObject();
             try {
-                json.put("user", user.toJson());
+                JSONObject user = new JSONObject().put("email", emailText.getText().toString())
+                                                  .put("password", passwordText.getText().toString());
+                json.put("user", user);
                 request.setEntity(new StringEntity(json.toString()));
                 HttpResponse response = client.execute(request);
                 JSONObject responseObject = new JSONObject(EntityUtils.toString(response.getEntity()));
-                return User.fromJson(responseObject.getJSONObject("user"));
+                return User.fromJson(responseObject);
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (UnsupportedEncodingException e) {
@@ -91,9 +94,16 @@ public class RegistrationActivity extends Activity {
         }
 
         @Override
-        protected void onPostExecute(User aVoid) {
-            Intent intent = new Intent(context, MapActivity.class);
-            startActivity(intent);
+        protected void onPostExecute(User user) {
+            if(user == null) {
+                setResult(RESULT_CANCELED);
+            } else {
+                Intent returnIntent = new Intent();
+                Log.d(TAG, "user created: " + user.toString());
+                returnIntent.putExtra("user", user);
+                setResult(RESULT_OK, returnIntent);
+                finish();
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
@@ -15,6 +16,8 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapActivity extends FragmentActivity {
+    private final static String TAG = "com.allen.mapple.MapActivity";
+
     private GoogleMap mMap;
 
     @Override
@@ -29,7 +32,7 @@ public class MapActivity extends FragmentActivity {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.map);
         SupportMapFragment mapFragment = (SupportMapFragment)fragment;
         mMap = mapFragment.getMap();
-
+        mMap.setMyLocationEnabled(true);
         mMap.setOnMapClickListener(new OnMapClickListener() {
 
             @Override

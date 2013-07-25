@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/sora">
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/sora"
+                android:id="@+id/email_login_text">
 
     <TextView
             android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="email address"
             android:id="@+id/textView3"
-            android:layout_alignBottom="@+id/email_register_edit"
+            android:layout_alignBottom="@+id/email_login_edit"
             android:layout_alignParentLeft="true"/>
 
     <TextView
@@ -28,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="password"
             android:id="@+id/textView4"
-            android:layout_alignBottom="@+id/password_register_edit"
+            android:layout_alignBottom="@+id/password_login_edit"
             android:layout_alignParentLeft="true"/>
 
     <EditText
@@ -36,16 +37,16 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/email_register_edit"
+            android:id="@+id/email_login_edit"
             android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/password_register_edit"/>
+            android:layout_alignLeft="@+id/password_login_edit"/>
 
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/password_register_edit"
+            android:id="@+id/password_login_edit"
             android:layout_below="@+id/textView3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp"/>
@@ -53,7 +54,7 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
+            android:id="@+id/make_login_button"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:text="Login"
